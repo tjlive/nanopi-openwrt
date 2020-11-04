@@ -1,5 +1,10 @@
 ## Nanopi r1s r2s openwrt 固件自动编译
 
+### 与原版比较：
+增加了docker以及Aria2插件。
+可以由原版平滑升级，亦可以平滑升级至原版。
+原版地址：https://github.com/klever1988/nanopi-openwrt
+
 ### 发布地址：
 
 https://github.com/paniy/nanopi-openwrt/releases  
