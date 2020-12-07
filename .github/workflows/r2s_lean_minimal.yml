@@ -57,6 +57,11 @@ jobs:
           . ../../5_mods.sh
           mv ../../scripts/check_wan4.sh package/base-files/files/usr/bin && sed -i '/exit/i\/bin/sh /usr/bin/check_wan4.sh &' package/base-files/files/etc/rc.local
           mv ../../scripts/autoupdate.sh package/base-files/files/root/au.sh && chmod +x package/base-files/files/root/au.sh
+          
+          cd package
+          git clone https://github.com/songchenwen/nanopi-r2s
+          mv nanopi-r2s/luci-app-r2sflasher/ .
+          rm -rf nanopi-r2s/
 
       - name: Build FriendlyWrt
         run: . 4_build_image.sh friendlywrt-rk3328 nanopi_r2s.mk
