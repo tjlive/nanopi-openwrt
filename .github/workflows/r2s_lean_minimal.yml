@@ -53,7 +53,7 @@ jobs:
           . ../../3_prepare_packages.sh
           . ../../add_passwall.sh
           
-          cd package
+          cd package/lean/
           git clone https://github.com/songchenwen/nanopi-r2s
           mv nanopi-r2s/luci-app-r2sflasher/ .
           rm -rf nanopi-r2s/
@@ -63,7 +63,7 @@ jobs:
           mv openwrt smartdns
           rm -rf smartdns1
           cp -r ../../../package/luci-app-smartdns .
-          cd ..
+          cd ../../
 
           git apply ../../enable_autocore.diff
           sed -i 's/@LINUX_5_4//' package/lean/luci-app-flowoffload/Makefile
