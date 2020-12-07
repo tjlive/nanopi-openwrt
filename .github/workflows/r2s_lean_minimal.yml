@@ -64,6 +64,7 @@ jobs:
           rm -rf smartdns1
           cp -r ../../../../package/luci-app-smartdns .
           cd ../../
+          ./scripts/feeds update -a && ./scripts/feeds install -a
 
           git apply ../../enable_autocore.diff
           sed -i 's/@LINUX_5_4//' package/lean/luci-app-flowoffload/Makefile
