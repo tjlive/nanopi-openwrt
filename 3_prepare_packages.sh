@@ -18,6 +18,18 @@ rm -rf openwrt-chinadns-ng/ && git clone https://github.com/pexcn/openwrt-chinad
 rm -rf v2ray/ && svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/v2ray
 rm -rf v2ray-plugin/ && svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/v2ray-plugin
 rm -rf trojan/ && svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/trojan
+
+##smartdns等
+git clone https://github.com/songchenwen/nanopi-r2s
+mv nanopi-r2s/luci-app-r2sflasher/ .
+rm -rf nanopi-r2s/
+git clone https://github.com/pymumu/smartdns.git
+mv smartdns smartdns1
+mv smartdns1/package/openwrt .
+mv openwrt smartdns
+rm -rf smartdns1
+cp -r ../../../../package/luci-app-smartdns .
+
 cd ../../
 
 
