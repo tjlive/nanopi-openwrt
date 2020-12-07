@@ -57,6 +57,7 @@ jobs:
           git clone https://github.com/songchenwen/nanopi-r2s
           mv nanopi-r2s/luci-app-r2sflasher/ .
           rm -rf nanopi-r2s/
+          feeds/luci/applications/luci-app-r2sflasher/
           git clone https://github.com/pymumu/smartdns.git
           mv smartdns smartdns1
           mv smartdns1/package/openwrt .
@@ -64,6 +65,7 @@ jobs:
           rm -rf smartdns1
           cp -r ../../../../package/luci-app-smartdns .
           cd ../../
+          feeds/luci/applications/luci-app-smartdns/
           ./scripts/feeds update -a && ./scripts/feeds install -a
         
 
