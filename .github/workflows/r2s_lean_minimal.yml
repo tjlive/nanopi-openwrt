@@ -52,6 +52,20 @@ jobs:
           curl 'https://git.openwrt.org/?p=openwrt/openwrt.git;a=patch;h=22378beb581b113def1dc392ef75306a2168a163' | git apply --reject - || true
           . ../../3_prepare_packages.sh
           . ../../add_passwall.sh
+          
+          cd package/lean/
+          git clone https://github.com/songchenwen/nanopi-r2s
+          mv nanopi-r2s/luci-app-r2sflasher/ .
+          rm -rf nanopi-r2s/
+          git clone https://github.com/pymumu/smartdns.git
+          mv smartdns smartdns1
+          mv smartdns1/package/openwrt .
+          mv openwrt smartdns
+          rm -rf smartdns1
+          cp -r ../../../../package/luci-app-smartdns .
+          ./scripts/feeds update -a && ./scripts/feeds install -a
+          cd ../../
+
           git apply ../../enable_autocore.diff
           sed -i 's/@LINUX_5_4//' package/lean/luci-app-flowoffload/Makefile
           . ../../5_mods.sh
