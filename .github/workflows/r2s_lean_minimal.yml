@@ -62,6 +62,13 @@ jobs:
           git clone https://github.com/songchenwen/nanopi-r2s
           mv nanopi-r2s/luci-app-r2sflasher/ .
           rm -rf nanopi-r2s/
+          git clone https://github.com/pymumu/smartdns.git
+          mv smartdns smartdns1
+          mv smartdns1/package/openwrt .
+          mv openwrt smartdns
+          rm -rf smartdns1
+          
+          cp -r ../../../package/luci-app-smartdns .
 
       - name: Build FriendlyWrt
         run: . 4_build_image.sh friendlywrt-rk3328 nanopi_r2s.mk
