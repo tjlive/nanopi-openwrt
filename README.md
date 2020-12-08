@@ -2,7 +2,9 @@
 
 ### 与原版比较：
 仅有R2S-Minimal版。  
-增加了docker以及Aria2插件。  
+增加了docker以及Aria2插件。
+增加了smartdns以及r2s刷机插件。
+更新了AdGuard Home插件。
 可以由原版平滑升级，亦可以平滑升级至原版。  
 原版地址：https://github.com/klever1988/nanopi-openwrt
 
