@@ -6,7 +6,8 @@
 增加了smartdns以及r2s刷机插件。  
 更新了AdGuard Home插件。  
 可以由原版平滑升级，亦可以平滑升级至原版。  
-原版地址：https://github.com/klever1988/nanopi-openwrt
+原版地址：https://github.com/klever1988/nanopi-openwrt  
+若能正常使用，不建议紧跟最新版本
 
 ### 发布地址：
 
